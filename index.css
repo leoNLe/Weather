@@ -25,7 +25,11 @@ body {
     width: 100vw;
     height: 100%;
 } 
-
+h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .cityQuery {
     width: 75%;
     line-height: 1.6em;
@@ -47,20 +51,26 @@ body {
     border-color: #79cdfd;
 }
 .prevCity {
-    overflow: scroll;
+    overflow: auto;
     padding-bottom: .5em;
 }
 .prevCity ul {
     margin: 0;
     padding: .2em 0 .5em 2em;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    display: flex;
+    flex-direction: row;
 }
 
 .prevCity ul li {
-    display: inline-block;
+    list-style-type: none;
     margin-right: .5em;
     background-color: white;
     padding: .1em 1em;
+}
+
+.cityList > li:hover {
+    background-color: #339AF0;
 }
 
 .weather-container {
@@ -68,7 +78,6 @@ body {
     grid-template-columns: auto;
     margin: 1em 1em;   
     grid-gap: .5em;  
-    width: 375px;
 }
 
 .current {
@@ -78,24 +87,33 @@ body {
 
 .future-div {
     display: grid;
-    grid-template-columns: repeat(5, 25%);
+    grid-template-columns: repeat(5, minmax(75px, 25%) );
     grid-gap: .5em;
-    overflow-x: scroll;
+    overflow: auto;
 }
 .future {
     background-color: #339AF0;
-    border-radius: 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
 } 
 
-
+@media (min-width:1000px) {
+    .weather-icon {
+        width: 25%;
+    }
+}
 
 @media (min-width: 750px) {
     .grid-container {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     .nav {
         grid-column: 1/1;
         width: auto;
+        grid-row: 1 / span 4;
     }
     .cityQuery {
         width: 50%;
@@ -103,13 +121,13 @@ body {
     }
     .prevCity {
         padding-left: .5em;
-
     }
     .prevCity ul {
+        flex-direction: column;
         padding-left: 0;
+        border-radius: 5px;
     }
     .prevCity ul li {
-        display: block;
         border: solid 1px rgba(242, 240, 241, 0.904);
         border-radius: 5px;
         margin-left: 0;

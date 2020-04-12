@@ -5,71 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="https://kit.fontawesome.com/02b166c631.js" crossorigin="anonymous"></script>
-
+    <script src="fontawesome-free-5.13.0-web/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="header"> Weather Dashboard </header>
     <div class="grid-container">
         <div class="nav"> 
-            <input type="text" class="cityQuery"><span class="fas fa-search "></span></input>
+            <input type="text" class="cityQuery">
+                <span class="search"><i class="fas fa-search"></i></span>
             <div class="prevCity">
-                <ul>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
-                    <li> dkdks </li>
+                <ul class="cityList">
 
                 </ul>
             </div>
         </div>
         <content class="weather-container">
             <div class="current">
-                <h3 class=""> Atlanta <span>08/15/2020</span></h3>
-                <p>Temperature: 90.9F</p>
-                <p>Humidity: 41%</p>
-                <p>Wind Speed: 4.7 mph </p>
-                <p>UV index: <span class="advisory">9.49</span> </p>
+   
             </div>
-            <div class="notice">5 days Forecast: </div>
+            <h3 class="notice">5 days Forecast: </h3>
             <div class="future-div">
-                <div class="future">
-                    <h5>
-                        08/16/2020
-                    </h5>    
-                    <i>Some type of Icons </i>
-                    <p>Temp: 86.84 F</p> 
-                    <p>Humidity: 43%</p>
-                </div>
-                <div class="future">
-                    <h4>
-                        08/16/2020
-                    </h4>    
-                    <i>Some type of Icons </i>
-                    <p>Temp: 86.84 F</p> 
-                    <p>Humidity: 43%</p>
-                </div>
-                <div class="future"> bunch of cards</div>
-                <div class="future"> bunch of cards</div>
-                <div class="future"> bunch of cards</div>
+     
             </div>
         </content>
     </div>  
+    <script src="script.js"></script> 
 </body>
 </html>
